@@ -32,7 +32,7 @@ import java.util.HashSet;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.awaken.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class AwakenThemes extends SettingsPreferenceFragment implements
+public class PotatoThemes extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String ACCENT_COLOR = "accent_color";
@@ -45,7 +45,7 @@ public class AwakenThemes extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.awaken_themes);
+        addPreferencesFromResource(R.xml.potato_themes);
         mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
         setupAccentPref();
