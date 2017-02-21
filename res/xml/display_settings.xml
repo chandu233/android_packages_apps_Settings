@@ -161,6 +161,11 @@
         android:summary="@string/double_tap_sleep_gesture_summary"
         android:defaultValue="false" />
 
+     <SwitchPreference
+        android:key="pocket_judge"
+        android:title="@string/proximity_wake_title"
+        android:summary="@string/proximity_wake_summary" />
+
     <ListPreference
         android:key="theme"
         android:title="@string/device_theme"
