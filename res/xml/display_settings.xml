@@ -136,6 +136,12 @@
         android:defaultValue="false"/>
 
     <com.android.settings.corvus.preferences.SystemSettingSwitchPreference
+        android:key="roaming_indicator_icon"
+        android:title="@string/roaming_indicator_icon_title"
+        android:summary="@string/roaming_indicator_icon_summary"
+        android:defaultValue="true"/>
+
+    <com.android.settings.corvus.preferences.SystemSettingSwitchPreference
         android:key="use_old_mobiletype"
         android:title="@string/use_old_mobiletype_title"
         android:summary="@string/use_old_mobiletype_summary"
