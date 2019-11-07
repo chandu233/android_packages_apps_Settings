@@ -1,4 +1,9 @@
 <resources>
+    <string name="system_global_actions_category">Global actions</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader</string>
     <!-- Media art -->
     <string name="lockscreen_media_art_title">Media art</string>
     <string name="lockscreen_media_art_summary">Toggle visibility of media art</string>
