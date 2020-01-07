@@ -1,4 +1,9 @@
 <resources>
+    <string name="themes_title">Potato Themes</string>
+    <string name="themes_summary">accent theming</string>
+    <string name="accent_color">Accent picker</string>
+    <string name="accent_summary">System wide accent maker</string>
+
     <string name="system_global_actions_category">Global actions</string>
 
     <!-- Global Actions -->
