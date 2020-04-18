@@ -1,4 +1,6 @@
 <resources>
+    <!-- Translucent lockscreen notifications background -->
+    <string name="translucent_lockscreen_notifications_bg_title">Translucent notifications background</string>
     <!-- Status bar -->
     <string name="status_bar_title">Status bar</string>
     <string name="icon_tuner_title">Icon tuner</string>
