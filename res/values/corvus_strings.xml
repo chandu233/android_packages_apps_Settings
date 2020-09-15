@@ -34,4 +34,8 @@
     <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
     <string name="total_ram">Total RAM</string>
 
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Wake device</string>
+    <string name="volume_rocker_wake_summary">Press volume keys to wake your device</string>
+
 </resources>
