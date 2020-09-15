@@ -22,5 +22,7 @@
     <!-- Battery temp -->
     <string name="battery_temp_title">Battery temperature</string>
 
+    <!-- Double Tap gestures -->
+    <string name="double_tap_sleep_lockscreen_title">Double tap to sleep on lockscreen</string>
+    <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put phone to sleep</string>
 </resources>
-
