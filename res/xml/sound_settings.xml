@@ -210,6 +210,18 @@
           android:summary="%s"/>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="volume_rocker"
+        android:title="@string/volume_title">
+
+    <com.android.settings.awaken.preferences.SystemSettingSwitchPreference
+        android:key="volume_button_music_control"
+        android:summary="@string/volume_rocker_music_controls_summary"
+        android:title="@string/volume_rocker_music_controls_title"
+        android:defaultValue="false" />
+
+    </PreferenceCategory>
+
     <com.android.settings.widget.WorkOnlyCategory
         android:key="sound_work_settings_section"
         android:title="@string/sound_work_settings"
