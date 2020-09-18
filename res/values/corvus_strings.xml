@@ -48,4 +48,9 @@
 
     <string name="use_old_mobiletype_title">Old mobiletype</string>
     <string name="use_old_mobiletype_summary">Use pre-p mobiletype icons for signal (Reboot required)</string>
+
+    <!-- QS Tint -->
+    <string name="qs_bg_use_new_tint">New tint style</string>
+    <string name="qs_bg_use_new_tint_summary">Enable the new QS tint style (Requires reboot)</string>
+
 </resources>
