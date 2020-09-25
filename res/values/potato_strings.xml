@@ -1,4 +1,7 @@
 <resources>
+    <!-- Media art -->
+    <string name="lockscreen_media_art_title">Media art</string>
+    <string name="lockscreen_media_art_summary">Toggle visibility of media art</string>
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
