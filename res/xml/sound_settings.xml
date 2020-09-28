@@ -221,7 +221,18 @@
         android:defaultValue="false" />
 
     </PreferenceCategory>
+     <PreferenceCategory
+        android:key="volume_panel_stuff"
+        android:title="@string/volume_panel">
 
+        <com.android.settings.awaken.preference.SystemSettingListPreference
+            android:key="systemui_plugin_volume"
+            android:title="@string/volume_panel"
+            android:entries="@array/volume_panel_entries"
+            android:entryValues="@array/volume_panel_values"
+            android:defaultValue="@string/volume_panel_aosp_val" />
+
+    </PreferenceCategory>
     <com.android.settings.widget.WorkOnlyCategory
         android:key="sound_work_settings_section"
         android:title="@string/sound_work_settings"
