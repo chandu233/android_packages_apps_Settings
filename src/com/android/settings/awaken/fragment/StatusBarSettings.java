@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.revengeos.settings.fragment;
+package com.android.settings.awaken.fragment;
 
 import android.os.Bundle;
 import android.content.Context;
