@@ -217,6 +217,9 @@ public class SimSelectNotification extends BroadcastReceiver {
         if (dialogType == EXTRA_DEFAULT_SUBSCRIPTION_SELECT_TYPE_NONE) {
             return;
         }
+        if (SimDialogSuppressionService.deferDialog(intent)) {
+            return;
+        }
 
         // Cancel any previous notifications
         cancelSimSelectNotification(context);
