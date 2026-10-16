@@ -65,6 +65,7 @@ import com.android.settings.network.telephony.SubscriptionActionDialogActivity;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -226,15 +227,29 @@ public class SimSelectNotification extends BroadcastReceiver {
             return;
         }
 
+        int slotIndex = SubscriptionManager.INVALID_SIM_SLOT_INDEX;
+        if (dialogType == EXTRA_DEFAULT_SUBSCRIPTION_SELECT_TYPE_ALL) {
+            int subId = intent.getIntExtra(EXTRA_SUBSCRIPTION_ID,
+                    SubscriptionManager.DEFAULT_SUBSCRIPTION_ID);
+            // Subscription broadcasts may have been queued before a SIM mode change completed.
+            SubscriptionManager subscriptionManager =
+                    context.getSystemService(SubscriptionManager.class);
+            List<SubscriptionInfo> primarySubscriptions =
+                    subscriptionManager.getActiveSubscriptionInfoList().stream()
+                    .filter(info -> !info.isOpportunistic()).toList();
+            if (primarySubscriptions.size() != 1
+                    || primarySubscriptions.get(0).getSubscriptionId() != subId) {
+                return;
+            }
+            slotIndex = primarySubscriptions.get(0).getSimSlotIndex();
+        }
+
         // Create a notification to tell the user that some defaults are missing
         createSimSelectNotification(context);
 
         if (dialogType == EXTRA_DEFAULT_SUBSCRIPTION_SELECT_TYPE_ALL
                 && getProgressState(context)
                 != SubscriptionActionDialogActivity.PROGRESS_IS_SHOWING) {
-            int subId = intent.getIntExtra(EXTRA_SUBSCRIPTION_ID,
-                    SubscriptionManager.DEFAULT_SUBSCRIPTION_ID);
-            int slotIndex = SubscriptionManager.getSlotIndex(subId);
             // If there is only one subscription, ask if user wants to use if for everything
             Intent newIntent = new Intent(context, SimDialogActivity.class);
             newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
